@@ -26,13 +26,13 @@ To get the latest version:
 
 ## What's Included
 
-### 🤖 01 - agents/
+### 🤖 Agents (1)
 
 | Name | Purpose |
 |------|---------|
 | documentation-writer | Create accurate, demand-driven documentation following Diataxis principles |
 
-### ⚡ 02 - skills/
+### ⚡ Skills (6)
 
 #### dev-skills/ (Plugin Development)
 
