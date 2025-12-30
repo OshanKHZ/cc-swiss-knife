@@ -6,7 +6,25 @@
     "name": "OshanKHZ"
   },
   "license": "MIT",
-  "skills": "./02 - skills/",
-  "agents": "./01 - agents/",
-  "commands": "./03 - commands/"
+  "keywords": [
+    "productivity",
+    "development",
+    "skills",
+    "commands",
+    "agents"
+  ],
+  "commands": [
+    "./03 - commands/commit.md"
+  ],
+  "agents": [
+    "./01 - agents/codebase-analyzer.md"
+  ],
+  "skills": [
+    "./02 - skills/dev-skills/skill-development/SKILL.md",
+    "./02 - skills/dev-skills/command-development/SKILL.md",
+    "./02 - skills/dev-skills/hook-development/SKILL.md",
+    "./02 - skills/dev-skills/agent-development/SKILL.md",
+    "./02 - skills/dev-skills/instructions-development/SKILL.md",
+    "./02 - skills/documentation-standards/SKILL.md"
+  ]
 }
