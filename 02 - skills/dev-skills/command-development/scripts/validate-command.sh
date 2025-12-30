@@ -181,6 +181,30 @@ validate_file() {
     echo "  ℹ️  Contains file references (@)"
   fi
 
+  # Check for backtick-wrapped special characters (permission error trigger)
+  if echo "$content" | grep -qE '`!`'; then
+    echo "  ❌ Backtick-wrapped exclamation mark (\`!\`) found - triggers permission errors"
+    echo "     Fix: Remove backticks around single ! characters"
+    ((errors++))
+  fi
+
+  if echo "$content" | grep -qE '`\$`'; then
+    echo "  ⚠️  Backtick-wrapped dollar sign (\`\$\`) found - may trigger permission errors"
+    echo "     Consider: Remove backticks if not needed for code formatting"
+    ((warnings++))
+  fi
+
+  # Check for non-ASCII backticks (Unicode variants) - more specific check
+  if echo "$content" | LC_ALL=C grep -qP '[^\x00-\x7F]' && echo "$content" | grep -q '`'; then
+    # Only warn if there are actual non-ASCII chars and backticks present
+    non_ascii_count=$(echo "$content" | LC_ALL=C grep -oP '[^\x00-\x7F]' | wc -l)
+    if [ "$non_ascii_count" -gt 0 ]; then
+      echo "  ⚠️  Non-ASCII characters detected ($non_ascii_count) - verify backticks are ASCII"
+      echo "     Check: Backticks should be plain ASCII (code 96), not smart quotes"
+      ((warnings++))
+    fi
+  fi
+
   # Summary
   echo ""
   if [ $errors -eq 0 ] && [ $warnings -eq 0 ]; then
