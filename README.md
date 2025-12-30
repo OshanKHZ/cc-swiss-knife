@@ -26,11 +26,11 @@ To get the latest version:
 
 ## What's Included
 
-### 🤖 Agents (1)
+### 🔧 Commands (1)
 
-| Name | Purpose |
-|------|---------|
-| documentation-writer | Create accurate, demand-driven documentation following Diataxis principles |
+| Command | Purpose | Flags |
+|---------|---------|-------|
+| `/commit` | Quick conventional commit with auto-generated or custom message | `--push` `--amend` `--all` |
 
 ### ⚡ Skills (6)
 
@@ -52,16 +52,32 @@ To get the latest version:
 
 ## Local Development
 
+Clone and set up for local development:
+
 ```bash
 git clone https://github.com/OshanKHZ/oshankhz-claude-code.git
 cd oshankhz-claude-code
+```
 
-# Add as local marketplace
-/plugin marketplace add /path/to/oshankhz-claude-code
+Inside Claude Code, run:
+
+```
+# Add as local marketplace (must be run from inside the cloned directory)
+/plugin marketplace add ./
 
 # Install plugin
 /plugin install oshankhz-claude-code
 ```
+
+### Syncing Local Changes
+
+After making changes to skills, commands, or agents:
+
+```
+/plugin → Manage marketplaces → oshankhz-claude-code → Update
+```
+
+> **Important:** Use `./` when adding the marketplace from inside the repository directory. This ensures Claude Code reads directly from your local files and updates are reflected after updating the marketplace.
 
 ## Contributing
 

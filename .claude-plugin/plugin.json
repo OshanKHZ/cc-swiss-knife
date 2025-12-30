@@ -1,11 +1,12 @@
 {
   "name": "oshankhz-claude-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OshanKHZ's curated Claude Code setup with skills, commands, and workflows for productive development",
   "author": {
     "name": "OshanKHZ"
   },
   "license": "MIT",
   "skills": "./02 - skills/",
-  "agents": "./01 - agents/"
+  "agents": "./01 - agents/",
+  "commands": "./03 - commands/"
 }
