@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/zHcwzra.png" alt="Claude Code Essentials Toolkit Banner" />
+</p>
+
 # OshanKHZ Claude Code
 
 This is my personal Claude Code setup. These are the configurations I've validated and use daily. More skills, commands, and agents coming soon.
