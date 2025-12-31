@@ -83,10 +83,15 @@ Generate or update CHANGELOG.md following [Keep a Changelog](https://keepachange
 
 | Feature | Description |
 |---------|-------------|
-| Format detection | Reads existing CHANGELOG.md header to match its style |
+| Format detection | Reads existing CHANGELOG.md header to match its style (dates, "v" prefix, sections) |
 | Smart versioning | Suggests patch/minor/major based on conventional commits |
-| Multi-project | Detects version from package.json, Cargo.toml, pyproject.toml, or git tags |
+| Tiered version detection | Finds version in common files first, then any JSON/TOML with "version" field |
+| Version sync | Asks to update project files when changelog version differs |
 | Keep a Changelog | Uses standard sections (Added, Changed, Fixed, Security, etc.) |
+
+**Date Format:** `December 25th, 2025` (readable with ordinal suffix)
+
+**New changelogs:** Use "v" prefix by default (`## [v1.0.0]`)
 
 **Version Bump Logic:**
 
