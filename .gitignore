@@ -14,3 +14,6 @@ Thumbs.db
 # Temp
 tmp/
 temp/
+
+# Local project instructions
+CLAUDE.local.md

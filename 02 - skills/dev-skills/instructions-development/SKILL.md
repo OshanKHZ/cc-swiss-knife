@@ -68,7 +68,7 @@ Provides 4 main operations:
 
 ### Step 1: Determine Operation and Complexity
 
-Use AskUserQuestion tool with TWO questions:
+Use AskUserQuestion tool with THREE questions:
 
 ```json
 {
@@ -106,15 +106,33 @@ Use AskUserQuestion tool with TWO questions:
           "description": "Multiple files with path patterns, for large projects"
         }
       ]
+    },
+    {
+      "question": "Should this be shared with your team or kept local?",
+      "header": "Sharing",
+      "multiSelect": false,
+      "options": [
+        {
+          "label": "Shared (CLAUDE.md)",
+          "description": "Committed to git, shared across team and sessions"
+        },
+        {
+          "label": "Local only (CLAUDE.local.md)",
+          "description": "Git-ignored, personal workspace rules only"
+        }
+      ]
     }
   ]
 }
 ```
 
 Route to workflow:
-- **Create new + Simple** → Initialize Workflow (Step 2) - single file
-- **Create new + Modular** → Initialize Workflow (Step 2) + Organize Workflow (Step 4)
-- **Sync + Simple** → Sync Workflow (Step 3) - update single file
+- **Create new + Simple + Shared** → Initialize Workflow (Step 2) - CLAUDE.md
+- **Create new + Simple + Local** → Initialize Workflow (Step 2) - CLAUDE.local.md + add to .gitignore
+- **Create new + Modular + Shared** → Initialize Workflow (Step 2) + Organize Workflow (Step 4) - CLAUDE.md
+- **Create new + Modular + Local** → Initialize Workflow (Step 2) + Organize Workflow (Step 4) - CLAUDE.local.md + add to .gitignore
+- **Sync + Simple + Shared** → Sync Workflow (Step 3) - update CLAUDE.md
+- **Sync + Simple + Local** → Sync Workflow (Step 3) - update CLAUDE.local.md
 - **Sync + Modular** → Sync Workflow (Step 3) + Organize Workflow (Step 4)
 - **Split** → Split Workflow (Step 5)
 
@@ -126,12 +144,16 @@ Create opinionated baseline CLAUDE.md for new projects.
 
 **Process**:
 
-1. **Detect project type**
+1. **Determine filename** (from Step 1 answer):
+   - Shared → `CLAUDE.md`
+   - Local only → `CLAUDE.local.md`
+
+2. **Detect project type**
    - Check if it's a code project (package.json, requirements.txt, go.mod, etc.)
    - Or non-code (docs, notes, research, etc.)
    - Ask user if unclear
 
-2. **Think through design**:
+3. **Think through design**:
    - Minimum viable CLAUDE.md?
    - Similar projects/patterns?
    - Architectural trade-offs?
@@ -142,12 +164,19 @@ Create opinionated baseline CLAUDE.md for new projects.
    - Key sections
    - Estimated line count
    - Architecture reasoning
+   - Filename that will be created
 
 5. **Generate and write** (after confirmation):
    - Single file: ~150-250 lines
    - Modular: ~100-150 lines with references to rules/
+   - Use determined filename from step 1
 
-6. **Inform user** with next steps
+6. **If local only (CLAUDE.local.md):**
+   - Add `CLAUDE.local.md` to `.gitignore`
+   - Create .gitignore if it doesn't exist
+   - Inform user it's git-ignored
+
+7. **Inform user** with next steps
 
 **See `references/initialize-workflow.md` for complete details**
 
