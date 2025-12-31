@@ -87,19 +87,23 @@ type(scope): description
 
 ### Message Rules (CRITICAL)
 
-**Use IMPERATIVE mood** - like giving an order to the code:
+**Use IMPERATIVE mood** - write messages as direct commands:
 
-| Good (imperative) | Bad (not imperative) |
-|-------------------|----------------------|
+| ✅ Correct (imperative) | ❌ Incorrect |
+|-------------------------|--------------|
 | add user login | added user login |
 | fix null pointer | fixed null pointer |
 | update dependencies | updating dependencies |
-| remove deprecated API | removed deprecated API |
+| remove deprecated API | this commit removes deprecated API |
 | refactor auth module | refactored auth module |
 
-**Mental test:** "If applied, this commit will **[your message]**"
-- "If applied, this commit will **add user login**" ✅
-- "If applied, this commit will **added user login**" ❌
+**Key principle:** Write what the commit **does**, not what you **did**.
+
+Think of it as completing the sentence: "This commit will..."
+- "This commit will **add user login**" ✅
+- "This commit will **added user login**" ❌
+
+**IMPORTANT:** The sentence above is just a mental check - NEVER include "this commit will" or "if applied" in the actual message. Just write the action directly.
 
 **Length:**
 - First line: max 50 characters (hard limit: 72)
