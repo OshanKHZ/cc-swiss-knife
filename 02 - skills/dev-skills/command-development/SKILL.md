@@ -501,6 +501,25 @@ PR #$1 Workflow:
 
 ## Troubleshooting
 
+### Quick Validation
+
+Use the validation script to catch common issues:
+
+```bash
+bash scripts/validate-command.sh your-command.md
+```
+
+The script checks for:
+- Valid YAML frontmatter
+- Backtick-wrapped special characters (`!` and `$`)
+- Non-ASCII backticks (smart quotes)
+- Missing `allowed-tools` for bash/file operations
+- Missing `argument-hint` when using `$1`/`$ARGUMENTS`
+- Invalid model names
+- Empty or overly long descriptions
+
+### Common Issues
+
 **Command not appearing:**
 - Check file is in correct directory
 - Verify `.md` extension present
@@ -523,6 +542,12 @@ PR #$1 Workflow:
 - Check file path is valid
 - Ensure Read tool allowed
 - Use absolute or project-relative paths
+
+**Permission check errors:**
+- Run validation script to detect backtick-wrapped special characters
+- Check for `\`!\`` patterns in documentation (remove backticks)
+- Verify all backticks are plain ASCII (code 96), not Unicode
+- Ensure `allowed-tools` matches commands used (e.g., `Bash(git:*)` for git commands)
 
 ## Plugin-Specific Features
 
