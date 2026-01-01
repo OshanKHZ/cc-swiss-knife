@@ -1,6 +1,6 @@
 # Quick Start
 
-Get the oshankhz-claude-code plugin running in **under 2 minutes**.
+Get the cc-swiss-knife plugin running in **under 2 minutes**.
 
 ## 📋 Prerequisites
 
@@ -16,13 +16,13 @@ Run these commands **inside Claude Code** (not in your terminal):
 ### 1. Add the Marketplace (~30 sec)
 
 ```
-/plugin marketplace add OshanKHZ/oshankhz-claude-code
+/plugin marketplace add OshanKHZ/cc-swiss-knife
 ```
 
 ### 2. Install the Plugin (~30 sec)
 
 ```
-/plugin install oshankhz-claude-code
+/plugin install cc-swiss-knife
 ```
 
 ## ✅ Verify It Works
@@ -50,7 +50,7 @@ You should see the plugin's skills listed.
 Ensure you typed the marketplace name correctly:
 
 ```
-/plugin marketplace add OshanKHZ/oshankhz-claude-code
+/plugin marketplace add OshanKHZ/cc-swiss-knife
 ```
 
 ### Plugin doesn't appear after install
@@ -75,4 +75,4 @@ The skills activate based on natural language triggers. Try being more specific:
 
 - [README](./README.md) - Full list of included skills and agents
 - [CONTRIBUTING](./CONTRIBUTING.md) - How to contribute
-- [GitHub Issues](https://github.com/OshanKHZ/oshankhz-claude-code/issues) - Report bugs or request features
+- [GitHub Issues](https://github.com/OshanKHZ/cc-swiss-knife/issues) - Report bugs or request features

@@ -1,20 +1,20 @@
 {
-  "name": "oshankhz-claude-code",
+  "name": "cc-swiss-knife",
   "owner": {
     "name": "OshanKHZ",
     "contact": "github.com/OshanKHZ"
   },
-  "description": "OshanKHZ's curated Claude Code setup",
+  "description": "Swiss army knife plugin marketplace for Claude Code - commands, skills, agents & workflows",
   "plugins": [
     {
-      "name": "oshankhz-claude-code",
+      "name": "cc-swiss-knife",
       "source": "./",
-      "description": "Skills, commands, and workflows for productive development",
+      "description": "Commands, skills, agents, workflows - validated & ready to use",
       "version": "1.1.0",
       "author": {
         "name": "OshanKHZ"
       },
-      "tags": ["skills", "commands", "hooks", "agents"]
+      "tags": ["claude-code", "plugin", "toolkit", "commands", "skills", "agents", "workflows"]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to oshankhz-claude-code!
+Thanks for your interest in contributing to cc-swiss-knife!
 
 ## 🤝 Ways to Contribute
 
@@ -11,7 +11,7 @@ Thanks for your interest in contributing to oshankhz-claude-code!
 
 ## 🐛 Reporting Bugs
 
-1. Check [existing issues](https://github.com/OshanKHZ/oshankhz-claude-code/issues) first
+1. Check [existing issues](https://github.com/OshanKHZ/cc-swiss-knife/issues) first
 2. Open a new issue with:
    - Clear title
    - Steps to reproduce
@@ -22,14 +22,14 @@ Thanks for your interest in contributing to oshankhz-claude-code!
 
 ```bash
 # Clone the repo
-git clone https://github.com/OshanKHZ/oshankhz-claude-code.git
-cd oshankhz-claude-code
+git clone https://github.com/OshanKHZ/cc-swiss-knife.git
+cd cc-swiss-knife
 ```
 
 Then in Claude Code:
 
 ```
-/plugin install --plugin-dir /path/to/oshankhz-claude-code
+/plugin install --plugin-dir /path/to/cc-swiss-knife
 ```
 
 This loads your local copy for development.

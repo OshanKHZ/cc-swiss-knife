@@ -1,32 +1,45 @@
 <p align="center">
-  <img src="https://i.imgur.com/zHcwzra.png" alt="Claude Code Essentials Toolkit Banner" />
+  <img src="https://i.imgur.com/zHcwzra.png" alt="CC Swiss Knife - Claude Code Plugin Marketplace" />
 </p>
 
-# OshanKHZ Claude Code
+<h1 align="center">CC Swiss Knife</h1>
 
-This is my personal Claude Code setup. These are the configurations I've validated and use daily. More skills, commands, and agents coming soon.
+<p align="center">
+  <strong>Swiss army knife plugin marketplace for Claude Code</strong><br>
+  Commands, skills, agents, workflows - validated & ready to use.
+</p>
+
+<p align="center">
+  <a href="#installation">Installation</a> •
+  <a href="#whats-included">What's Included</a> •
+  <a href="#commands">Commands</a> •
+  <a href="#skills">Skills</a> •
+  <a href="#contributing">Contributing</a>
+</p>
+
+---
 
 ## Installation
 
-Run these commands inside Claude Code (not in your terminal):
+Run inside Claude Code (not in your terminal):
 
 ```
-# Step 1: Add the marketplace
-/plugin marketplace add OshanKHZ/oshankhz-claude-code
+# Add the marketplace
+/plugin marketplace add OshanKHZ/cc-swiss-knife
 
-# Step 2: Install the plugin
-/plugin install oshankhz-claude-code
+# Install the plugin
+/plugin install cc-swiss-knife
 ```
 
-> **Note:** After installation, skills won't appear in `~/.claude/skills/`. They're loaded directly from the marketplace. Test by asking Claude to "create a skill", for example - the skill-development skill should activate automatically.
+> **Note:** Skills activate automatically based on context. Try asking Claude to "create a skill" - the skill-development skill will kick in.
 
 ## Updating
 
-To get the latest version:
+```
+/plugin → Manage marketplaces → cc-swiss-knife → Update
+```
 
-```
-/plugin → Manage marketplaces → oshankhz-claude-code → Update
-```
+---
 
 ## What's Included
 
@@ -35,61 +48,105 @@ To get the latest version:
 | Command | Purpose | Flags/Args |
 |---------|---------|------------|
 | `/commit` | Quick conventional commit with auto-generated or custom message | `--push` `--amend` `--all` |
-| `/changelog` | Generate or update CHANGELOG.md following Keep a Changelog format | `[version]` |
+| `/changelog` | Generate or update CHANGELOG.md with smart version detection | `[version]` |
+
+[View all commands →](./03%20-%20commands/)
 
 ### ⚡ Skills (6)
 
-#### dev-skills/ (Plugin Development)
+#### Plugin Development
 
-| Name | Purpose |
-|------|---------|
-| skill-development | Create, edit, and validate skills with proper structure, frontmatter, and progressive disclosure |
-| command-development | Build slash commands with dynamic arguments, file references, and bash execution |
-| hook-development | Create event-driven automation with prompt-based and command hooks for validation and policies |
-| agent-development | Design autonomous agents with triggering examples, system prompts, and tool restrictions |
-| instructions-development | Initialize, sync, and organize CLAUDE.md with codebase patterns and modular rules |
+| Skill | Purpose |
+|-------|---------|
+| `skill-development` | Create and validate skills with proper structure and frontmatter |
+| `command-development` | Build slash commands with dynamic arguments and bash execution |
+| `hook-development` | Event-driven automation with prompt and command hooks |
+| `agent-development` | Design autonomous agents with system prompts and tool restrictions |
+| `instructions-development` | Initialize and organize CLAUDE.md with codebase patterns |
 
-#### Standalone Skills
+#### Documentation
 
-| Name | Purpose |
-|------|---------|
-| documentation-standards | Diataxis-based templates, checklists, and examples for READMEs, APIs, tutorials, and ADRs |
+| Skill | Purpose |
+|-------|---------|
+| `documentation-standards` | Diataxis-based templates for READMEs, APIs, tutorials, and ADRs |
+
+[View all skills →](./02%20-%20skills/)
+
+---
+
+## Commands
+
+### `/commit` - Quick Conventional Commit
+
+```bash
+/commit                          # Auto-generate message
+/commit feat: add login          # Custom message
+/commit --push fix: typo         # Commit and push
+/commit --all --push             # Stage all, commit, push
+```
+
+**Flags:** `--push` `--amend` `--all`
+
+### `/changelog` - Changelog Generator
+
+```bash
+/changelog                       # Auto-detect version bump
+/changelog 2.0.0                 # Specific version
+```
+
+**Features:**
+- Smart version detection (package.json, Cargo.toml, any JSON/TOML with version)
+- Conventional commits → changelog sections
+- Respects existing changelog format
+- Version sync across project files
+
+---
+
+## Skills
+
+Skills activate automatically when relevant. No manual invocation needed.
+
+**Plugin Development:**
+- Ask Claude to "create a command" → `command-development` activates
+- Ask to "build a skill" → `skill-development` activates
+- Ask about "hooks" → `hook-development` activates
+
+**Documentation:**
+- Ask to "write documentation" → `documentation-standards` activates
+
+---
 
 ## Local Development
 
-Clone and set up for local development:
-
 ```bash
-git clone https://github.com/OshanKHZ/oshankhz-claude-code.git
-cd oshankhz-claude-code
+git clone https://github.com/OshanKHZ/cc-swiss-knife.git
+cd cc-swiss-knife
 ```
 
-Inside Claude Code, run:
+Inside Claude Code:
 
 ```
-# Add as local marketplace (must be run from inside the cloned directory)
 /plugin marketplace add ./
-
-# Install plugin
-/plugin install oshankhz-claude-code
+/plugin install cc-swiss-knife
 ```
 
-### Syncing Local Changes
-
-After making changes to skills, commands, or agents:
+After changes:
 
 ```
-/plugin → Manage marketplaces → oshankhz-claude-code → Update
+/plugin → Manage marketplaces → cc-swiss-knife → Update
 ```
 
-> **Important:** Use `./` when adding the marketplace from inside the repository directory. This ensures Claude Code reads directly from your local files and updates are reflected after updating the marketplace.
+---
 
 ## Contributing
 
-Found a bug or have a suggestion? Open an issue or submit a PR:
-- [Issues](https://github.com/OshanKHZ/oshankhz-claude-code/issues)
-- [Pull Requests](https://github.com/OshanKHZ/oshankhz-claude-code/pulls)
+Found a bug or have a suggestion?
+
+- [Open an Issue](https://github.com/OshanKHZ/cc-swiss-knife/issues)
+- [Submit a PR](https://github.com/OshanKHZ/cc-swiss-knife/pulls)
+
+---
 
 ## License
 
-MIT - Feel free to fork and customize for your own setup.
+MIT - Fork it, customize it, make it yours.

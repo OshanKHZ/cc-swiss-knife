@@ -1,17 +1,19 @@
 {
-  "name": "oshankhz-claude-code",
+  "name": "cc-swiss-knife",
   "version": "1.1.0",
-  "description": "OshanKHZ's curated Claude Code setup with skills, commands, and workflows for productive development",
+  "description": "Swiss army knife plugin marketplace for Claude Code - commands, skills, agents & workflows",
   "author": {
     "name": "OshanKHZ"
   },
   "license": "MIT",
   "keywords": [
-    "productivity",
-    "development",
-    "skills",
+    "claude-code",
+    "plugin",
+    "toolkit",
     "commands",
-    "agents"
+    "skills",
+    "agents",
+    "workflows"
   ],
   "commands": [
     "./03 - commands/commit.md",
