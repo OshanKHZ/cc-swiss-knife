@@ -2,19 +2,24 @@
   "name": "cc-swiss-knife",
   "owner": {
     "name": "OshanKHZ",
-    "contact": "github.com/OshanKHZ"
+    "url": "https://github.com/OshanKHZ"
   },
+  "repository": "https://github.com/OshanKHZ/cc-swiss-knife",
   "description": "Swiss army knife plugin marketplace for Claude Code - commands, skills, agents & workflows",
   "plugins": [
     {
       "name": "cc-swiss-knife",
-      "source": "./",
-      "description": "Commands, skills, agents, workflows - validated & ready to use",
-      "version": "1.1.0",
-      "author": {
-        "name": "OshanKHZ"
-      },
-      "tags": ["claude-code", "plugin", "toolkit", "commands", "skills", "agents", "workflows"]
+      "source": "./plugins/core",
+      "description": "Essential commands, skills, and workflows for everyday development",
+      "version": "1.0.0",
+      "tags": ["claude-code", "toolkit", "productivity", "workflows", "automation", "developer-tools"]
+    },
+    {
+      "name": "claude-code-forge",
+      "source": "./plugins/claude-code-forge",
+      "description": "The forge for plugin development - create skills, commands, agents, hooks, and more",
+      "version": "1.0.0",
+      "tags": ["claude-code", "plugin-development", "forge", "skills", "extensibility"]
     }
   ]
 }

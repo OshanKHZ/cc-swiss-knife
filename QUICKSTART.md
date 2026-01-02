@@ -1,10 +1,8 @@
 # Quick Start
 
-Get the cc-swiss-knife plugin running in **under 2 minutes**.
+Get cc-swiss-knife running in **under 2 minutes**.
 
 ## 📋 Prerequisites
-
-Before you begin, ensure you have:
 
 - [ ] Claude Code CLI installed and configured
 - [ ] An active Claude Code session
@@ -13,19 +11,37 @@ Before you begin, ensure you have:
 
 Run these commands **inside Claude Code** (not in your terminal):
 
-### 1. Add the Marketplace (~30 sec)
+### 1. Add the Marketplace
 
-```
+```bash
 /plugin marketplace add OshanKHZ/cc-swiss-knife
 ```
 
-### 2. Install the Plugin (~30 sec)
+### 2. Install Plugin(s)
 
-```
+```bash
+# Core tools (recommended for everyone)
 /plugin install cc-swiss-knife
+
+# Plugin development (for developers building plugins)
+/plugin install claude-code-forge
 ```
 
 ## ✅ Verify It Works
+
+### Test cc-swiss-knife:
+
+```bash
+/commit --help
+```
+
+Or stage some changes and run:
+
+```bash
+/commit
+```
+
+### Test claude-code-forge:
 
 Ask Claude:
 
@@ -33,15 +49,7 @@ Ask Claude:
 Create a skill for me
 ```
 
-If the skill-development skill activates and Claude starts guiding you through skill creation, the installation worked.
-
-**Alternative verification:**
-
-```
-/help skills
-```
-
-You should see the plugin's skills listed.
+If the skill-development skill activates and Claude starts guiding you, it works!
 
 ## 🔧 Troubleshooting
 
@@ -49,30 +57,28 @@ You should see the plugin's skills listed.
 
 Ensure you typed the marketplace name correctly:
 
-```
+```bash
 /plugin marketplace add OshanKHZ/cc-swiss-knife
 ```
 
 ### Plugin doesn't appear after install
 
-Try restarting your Claude Code session:
+Try restarting your Claude Code session or run:
 
+```bash
+/plugin → Manage marketplaces → cc-swiss-knife → Update
 ```
-/clear
-```
-
-Then verify with `/help skills`.
 
 ### Skills not activating
 
-The skills activate based on natural language triggers. Try being more specific:
+Skills activate based on natural language triggers. Try being specific:
 
-- "Create a new agent for my plugin"
+- "Create a new skill for my plugin"
 - "Help me write a slash command"
 - "I need to create a hook"
 
 ## 🆘 Need Help?
 
-- [README](./README.md) - Full list of included skills and agents
+- [README](./README.md) - Full list of included plugins
 - [CONTRIBUTING](./CONTRIBUTING.md) - How to contribute
-- [GitHub Issues](https://github.com/OshanKHZ/cc-swiss-knife/issues) - Report bugs or request features
+- [GitHub Issues](https://github.com/OshanKHZ/cc-swiss-knife/issues) - Report bugs

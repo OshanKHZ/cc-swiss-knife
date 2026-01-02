@@ -5,7 +5,7 @@ Thanks for your interest in contributing to cc-swiss-knife!
 ## 🤝 Ways to Contribute
 
 - Report bugs
-- Suggest new skills or improvements
+- Suggest new skills or commands
 - Submit pull requests
 - Improve documentation
 
@@ -28,28 +28,45 @@ cd cc-swiss-knife
 
 Then in Claude Code:
 
-```
-/plugin install --plugin-dir /path/to/cc-swiss-knife
+```bash
+# Add local marketplace
+/plugin marketplace add ./
+
+# Install plugins
+/plugin install cc-swiss-knife
+/plugin install claude-code-forge
 ```
 
-This loads your local copy for development.
+## 📁 Project Structure
+
+```
+cc-swiss-knife/
+├── plugins/
+│   ├── core/              # cc-swiss-knife plugin
+│   │   ├── commands/
+│   │   └── skills/
+│   └── claude-code-forge/ # claude-code-forge plugin
+│       └── skills/
+└── .claude-plugin/
+    └── marketplace.json
+```
 
 ## ✅ Validation Scripts
 
 Before submitting changes, run the relevant validation scripts:
 
 ```bash
+# Validate commands
+bash plugins/claude-code-forge/skills/command-development/scripts/validate-command.sh <file>
+
 # Validate skills
-./02\ -\ skills/dev-skills/skill-development/scripts/validate-skill.sh path/to/SKILL.md
+bash plugins/claude-code-forge/skills/skill-development/scripts/validate-skill.sh <file>
 
 # Validate agents
-./02\ -\ skills/dev-skills/agent-development/scripts/validate-agent.sh path/to/agent.md
-
-# Validate commands
-./02\ -\ skills/dev-skills/command-development/scripts/validate-command.sh path/to/command.md
+bash plugins/claude-code-forge/skills/agent-development/scripts/validate-agent.sh <file>
 
 # Validate hooks
-./02\ -\ skills/dev-skills/hook-development/scripts/validate-hook-schema.sh path/to/settings.json
+bash plugins/claude-code-forge/skills/hook-development/scripts/validate-hook-schema.sh <file>
 ```
 
 ## 🔀 Pull Request Process
@@ -58,7 +75,7 @@ Before submitting changes, run the relevant validation scripts:
 2. Create a branch: `git checkout -b feature/my-feature`
 3. Make your changes
 4. Run validation scripts
-5. Commit with clear message
+5. Commit with conventional format: `feat:`, `fix:`, `docs:`
 6. Push and open PR
 
 ## 📜 Code of Conduct
