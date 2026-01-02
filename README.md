@@ -2,7 +2,15 @@
   <img src="https://imgur.com/73Iyp7u.png" alt="CC Swiss Knife - Claude Code Plugin Marketplace" />
 </p>
 
-<h1 align="center">CC Swiss Knife</h1>
+<p align="center">
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.2.0-white" alt="Version" /></a>
+  <a href="plugins/"><img src="https://img.shields.io/badge/Commands-2-brightgreen" alt="Commands" /></a>
+  <a href="plugins/"><img src="https://img.shields.io/badge/Skills-7-orange" alt="Skills" /></a>
+  <a href="plugins/"><img src="https://img.shields.io/badge/Commands-2-blue" alt="Commands" /></a>
+  <a href="https://github.com/OshanKHZ/cc-swiss-knife"><img src="https://img.shields.io/github/stars/OshanKHZ/cc-swiss-knife?style=social" alt="GitHub Stars" /></a>
+</p>
+
+<h1 align="center">Claude Code - Swiss Knife</h1>
 
 <p align="center">
   <strong>Swiss army knife plugin marketplace for Claude Code</strong><br>
@@ -50,7 +58,7 @@ Then install the plugin(s) you want:
 
 ## Whats's Included
 
-### Plugin: cc-swiss-knife (Core)
+### 🧩 Plugin: cc-swiss-knife (Core)
 
 Essential toolkit for everyday use.
 
@@ -75,7 +83,7 @@ Essential toolkit for everyday use.
 
 ---
 
-### Plugin: claude-code-forge (Development)
+### 🧩 Plugin: claude-code-forge (Development)
 
 Skills and resources for building Claude Code plugins, commands, agents, and hooks.
 
@@ -92,7 +100,6 @@ Skills and resources for building Claude Code plugins, commands, agents, and hoo
 | `hook-development` | Event-driven automation with prompt and command hooks |
 | `agent-development` | Design autonomous agents with system prompts and tool restrictions |
 | `instructions-development` | Initialize and organize CLAUDE.md with codebase patterns |
-| `plugin-development` | Create and structure complete Claude Code plugins |
 
 [View all →](./plugins/claude-code-forge/)
 
