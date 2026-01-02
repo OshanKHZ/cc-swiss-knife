@@ -134,7 +134,11 @@ If confirmed, create a simple commit without footers:
 git commit -m "type(scope): description"
 ```
 
-**IMPORTANT:** Do NOT add any footers like "Generated with Claude Code" or "Co-Authored-By" - keep commits clean and simple.
+**CRITICAL: No footers or signatures**
+- Do NOT add "Generated with Claude Code" footer
+- Do NOT add "Co-Authored-By" lines
+- Do NOT add any AI attribution
+- Keep commits clean with ONLY the conventional commit message
 
 ### 5. Handle --amend flag
 

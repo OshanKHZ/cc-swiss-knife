@@ -1,0 +1,28 @@
+{
+  "name": "cc-swiss-knife",
+  "version": "1.0.0",
+  "description": "Swiss army knife for Claude Code - essential commands, skills, and workflows for everyday development",
+  "author": {
+    "name": "OshanKHZ",
+    "url": "https://github.com/OshanKHZ"
+  },
+  "repository": "https://github.com/OshanKHZ/cc-swiss-knife",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "toolkit",
+    "productivity",
+    "workflows",
+    "automation",
+    "developer-tools",
+    "cli"
+  ],
+  "commands": [
+    "./commands/commit.md",
+    "./commands/changelog.md"
+  ],
+  "skills": [
+    "./skills/documentation-standards/SKILL.md"
+  ]
+}

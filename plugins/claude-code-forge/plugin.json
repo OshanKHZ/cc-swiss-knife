@@ -1,0 +1,30 @@
+{
+  "name": "claude-code-forge",
+  "version": "1.0.0",
+  "description": "The forge for Claude Code plugin development - create skills, commands, agents, hooks, and more",
+  "author": {
+    "name": "OshanKHZ",
+    "url": "https://github.com/OshanKHZ"
+  },
+  "repository": "https://github.com/OshanKHZ/cc-swiss-knife",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin-development",
+    "skills",
+    "commands",
+    "agents",
+    "hooks",
+    "forge",
+    "developer-tools",
+    "extensibility"
+  ],
+  "skills": [
+    "./skills/skill-development/SKILL.md",
+    "./skills/command-development/SKILL.md",
+    "./skills/hook-development/SKILL.md",
+    "./skills/agent-development/SKILL.md",
+    "./skills/instructions-development/SKILL.md",
+    "./skills/plugin-development/SKILL.md"
+  ]
+}
