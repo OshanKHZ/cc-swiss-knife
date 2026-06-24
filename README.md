@@ -42,6 +42,9 @@ Then install the plugin(s) you want:
 
 # Plugin development (developers)
 /plugin install claude-code-forge
+
+# Hermes Agent X/Twitter workflows
+/plugin install hermes-tweet
 ```
 
 ## Updating
@@ -105,6 +108,24 @@ Skills and resources for building Claude Code plugins, commands, agents, and hoo
 
 ---
 
+### 🧩 Plugin: hermes-tweet (Hermes Agent)
+
+Discovery skill for the native Hermes Agent X/Twitter plugin.
+
+```bash
+/plugin install hermes-tweet
+```
+
+**Skills:**
+
+| Skill | Purpose |
+|-------|---------|
+| `hermes-tweet` | Route Claude Code users to the native Hermes Tweet plugin for read-first X/Twitter research and approval-gated actions |
+
+[View all →](./plugins/hermes-tweet/)
+
+---
+
 ## Local Development
 
 ```bash
@@ -118,6 +139,7 @@ Inside Claude Code:
 /plugin marketplace add ./
 /plugin install cc-swiss-knife
 /plugin install claude-code-forge
+/plugin install hermes-tweet
 ```
 
 After changes:
